@@ -13,7 +13,7 @@ import { Send, MapPin, Phone, Mail } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { motion } from "motion/react";
 
-const Contact = ({ isDarkMode }) => {
+const Contact = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

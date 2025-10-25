@@ -70,7 +70,7 @@ const Services = () => {
                 </p>
               </div>
               <div className="hidden md:block">
-                <Image src={assets.subhot} width={80} />
+                <Image src={assets.subhot} width={80} alt="subhot" />
               </div>
             </div>
 
