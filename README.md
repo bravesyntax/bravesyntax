@@ -14,7 +14,7 @@ Welcome to my GitHub profile! I am a passionate Web developer with a love for bu
 ## 🌍 Connect with Me
 
 - [LinkedIn](https://www.linkedin.com/in/deepak-kumar890/)
-- [Portfolio](https://bravesyntax-p9y8.vercel.app/)
+- [Portfolio](https://bravesyntax.vercel.app/)
 
 ## 🎯 Fun Facts
 
