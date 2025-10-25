@@ -53,6 +53,7 @@ import slider3 from "../assets/PS-fresh.png";
 import slider4 from "../assets/PS-multiStepForm.jpg";
 import slider5 from "../assets/PS-recipe.jpg";
 import slider6 from "../assets/PS-contactForm.jpg";
+import subhot from "../assets/subhot.png";
 
 export const assets = {
   user_image,
@@ -96,6 +97,7 @@ export const assets = {
   send_icon,
   right_arrow_bold,
   right_arrow_bold_dark,
+  subhot,
 };
 
 export const workData = [
