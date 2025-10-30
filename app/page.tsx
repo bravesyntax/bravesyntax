@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -8,63 +8,38 @@ import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Loader from "./components/Loader";
-import { Toaster } from "react-hot-toast";
+import ErrorBoundary from "./components/ErrorBoundary";
+import { useDarkMode } from "./hooks/useDarkMode";
 
+/**
+ * Main page component for the portfolio website
+ */
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setIsLoading(false);
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = "";
-    }
-  }, [isDarkMode]);
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-
-    if (storedTheme === "dark") {
-      setIsDarkMode(true);
-    } else if (storedTheme === "light") {
-      setIsDarkMode(false);
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      // If no preference is stored, check the system preference
-      setIsDarkMode(true);
-    } else {
-      setIsDarkMode(false);
-    }
-  }, []);
+  const { isDarkMode, setIsDarkMode } = useDarkMode();
 
   return (
-    <div className="relative">
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <>
-          <Toaster />
-          <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+    <ErrorBoundary>
+      <div className="relative">
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            duration: 4000,
+            style: {
+              background: isDarkMode ? "#1f2937" : "#fff",
+              color: isDarkMode ? "#fff" : "#000",
+            },
+          }}
+        />
+        <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+        <main>
           <Header />
           <About isDarkMode={isDarkMode} />
           <Services />
           <Portfolio />
           <Contact />
-          <Footer />
-        </>
-      )}
-    </div>
+        </main>
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 }
