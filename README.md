@@ -5,7 +5,7 @@
 ### 🚀 Founder of [BraveSyntax](https://www.bravesyntax.com) — Design · Development · Digital Marketing
 
 <a href="https://www.bravesyntax.com"><img src="https://img.shields.io/badge/Website-bravesyntax.com-F97316?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
-<a href="https://www.linkedin.com/in/deepak-kumar890"><img src="https://img.shields.io/badge/LinkedIn-Deepak_Kumar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://www.linkedin.com/in/bravesyntax"><img src="https://img.shields.io/badge/LinkedIn-Deepak_Kumar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 <a href="https://www.instagram.com/bravesyntax"><img src="https://img.shields.io/badge/Instagram-bravesyntax-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
 <a href="mailto:support@bravesyntax.com"><img src="https://img.shields.io/badge/Email-support@bravesyntax.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 
